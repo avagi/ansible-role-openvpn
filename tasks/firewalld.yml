@@ -39,7 +39,7 @@
 
 - name: Enable masquerading on external zone
   firewalld:
-    masquerade: true
+    masquerade: true | bool
     zone: "{{firewalld_default_interface_zone}}"
     permanent: true
     state: enabled
